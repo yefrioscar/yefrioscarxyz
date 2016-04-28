@@ -18,6 +18,7 @@ function frameLooper() {
 	loopTimer = setTimeout('frameLooper()', 70);
 }
 
+
 frameLooper();
 
 function getFormattedDate() {
