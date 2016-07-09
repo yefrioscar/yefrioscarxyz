@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title> Yefri Oscar</title>
     <link rel="stylesheet" href="build/css/master.css" media="screen" title="no title" charset="utf-8"> </head>
-    <link rel="stylesheet" href="build/css/normalize.css" media="screen" title="no title" charset="utf-8"> </head>
+    <link rel="stylesheet" href="build/css/normalize.css" media="screen" title="no title" charset="utf-8">
+</head>
   <body>
   <header class="header">
     <div class="shell">
@@ -211,21 +212,24 @@
   <form class="contact__form" action="index.html" method="post" id="form_contact">
 
     <div class="contact__form__label">
-      <input id="name" type="text" placeholder="Name">
+      <input id="name" required type="text" placeholder="Name">
     </div>
     <div class="contact__form__label">
-      <input id="mail" type="mail" placeholder="Mail">
+      <input id="mail" required type="email" placeholder="Mail">
     </div>
     <div class="contact__form__label">
-      <textarea id="textarea" name="text" rows="8" cols="40" placeholder="Talk me about.."></textarea>
+      <textarea type="textArea"  id="textarea" required name="text" rows="8" cols="40" placeholder="Talk me about.."></textarea>
     </div>
     <div class="contact__form__label submit">
-      <input type="button" name="name" id="button" value="Getting Started" onclick="enviar();">
+      <input type="submit" name="name" id="button" value="Getting Started" onclick="enviar();">
     </div>
     <div class="contact__form__division"></div>
     <h2 class="contact__form__save">Or <a  href="#"><span>hello</span>@yefrioscar.xyz</a></h2>
   </form>
 </section>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+<script src="build/js/validatr.js"></script>
 
   <script src="build/js/validation.js"></script>
   <script src="build/js/app.js"></script>

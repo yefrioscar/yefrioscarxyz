@@ -19,7 +19,8 @@ $color6:#FF4444;
     color: #312E49;
     text-align: center;
   }
-  #warNewElement {
+
+/*  #warNewElement {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +33,7 @@ $color6:#FF4444;
     font-size: 1em;
     text-align: center;
     background-color: #eee;
-  }
+  }*/
 
   &__form {
     width: 40%;
@@ -44,6 +45,7 @@ $color6:#FF4444;
       background-color:#312E49;
       margin-bottom: 1em;
     }
+
 
 
     &__save {
@@ -71,6 +73,9 @@ $color6:#FF4444;
     &__label {
       margin: 1em 0 1em 0;
       height: 3em;
+
+
+      
 
       &:nth-child(3) {
         height: 10em;
