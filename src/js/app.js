@@ -7,7 +7,7 @@ var	myArray = myString.split(""),
 		loopTimer,
 		setToday;
 
-setToday = document.getElementById('newTime').outerHTML = "(" + getFormattedDate() + ")";
+
 
 function frameLooper() {
 	if (myArray.length > 0) {
@@ -16,20 +16,38 @@ function frameLooper() {
 		clearTimeout(loopTimer);
 	}
 	loopTimer = setTimeout('frameLooper()', 70);
+
+}
+
+/*
+function getHourss(){
+
+		'use strict';
+		var time = document.getElementById('newTime');
+		var getHour = function() {
+			var date = new Date();
+			time.textContent = "("+date.getFullYear() + "-" +
+					(date.getMonth() + 1) + "-" +
+					date.getDate() + " " +
+					date.getHours() + ":" +
+					date.getMinutes() + ":" +
+					date.getSeconds() + ")";
+		};
+		setInterval(getHour,1000);
+	}
+*/
+function lanzala() {
+	var time = document.getElementById('newTime');
+	//var getHour = function() {
+		var date = new Date();
+		time.textContent = "("+date.getFullYear() + "-" +
+				(date.getMonth() + 1) + "-" +
+				date.getDate() + " " +
+				date.getHours() + ":" +
+				date.getMinutes() + ":" +
+				date.getSeconds() + ")";
+	frameLooper();
 }
 
 
-frameLooper();
-
-function getFormattedDate() {
-  var date = new Date();
-
-  var str = date.getFullYear() + "-" +
-		  (date.getMonth() + 1) + "-" +
-		  date.getDate() + " " +
-		  date.getHours() + ":" +
-		  date.getMinutes() + ":" +
-		  date.getSeconds();
-
-  return str;
-}
+lanzala();

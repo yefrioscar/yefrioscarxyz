@@ -25,6 +25,23 @@ body, html, * {
   position: relative;
   padding: 2em 0 0 0;
 
+  .logo_sheck{
+    position:absolute;
+    top:35%;
+    left:4%;
+    display: none;
+    svg {
+
+      g {
+
+        path {
+
+
+        }
+      }
+    }
+  }
+
   .shell {
     margin:auto;
     width: 30rem;
@@ -46,7 +63,9 @@ body, html, * {
     letter-spacing: 0.04375rem;
     padding: 0px 0.275rem;
   }
-
+  div#newTime {
+    display: inline-block;
+  }
   span.name {color: $color6;}
   span.atildi {color: #F2952B;}
 

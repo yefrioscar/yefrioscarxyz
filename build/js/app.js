@@ -6,23 +6,38 @@ var myArray = myString.split(""),
     loopTimer,
     setToday;
 
-setToday = document.getElementById('newTime').outerHTML = "(" + getFormattedDate() + ")";
-
 function frameLooper() {
-		if (myArray.length > 0) {
-				document.getElementById('myTypingText').innerHTML += myArray.shift();
-		} else {
-				clearTimeout(loopTimer);
-		}
-		loopTimer = setTimeout('frameLooper()', 70);
+	if (myArray.length > 0) {
+		document.getElementById('myTypingText').innerHTML += myArray.shift();
+	} else {
+		clearTimeout(loopTimer);
+	}
+	loopTimer = setTimeout('frameLooper()', 70);
 }
 
-frameLooper();
+/*
+function getHourss(){
 
-function getFormattedDate() {
-		var date = new Date();
-
-		var str = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
-
-		return str;
+		'use strict';
+		var time = document.getElementById('newTime');
+		var getHour = function() {
+			var date = new Date();
+			time.textContent = "("+date.getFullYear() + "-" +
+					(date.getMonth() + 1) + "-" +
+					date.getDate() + " " +
+					date.getHours() + ":" +
+					date.getMinutes() + ":" +
+					date.getSeconds() + ")";
+		};
+		setInterval(getHour,1000);
+	}
+*/
+function lanzala() {
+	var time = document.getElementById('newTime');
+	//var getHour = function() {
+	var date = new Date();
+	time.textContent = "(" + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + ")";
+	frameLooper();
 }
+
+lanzala();
